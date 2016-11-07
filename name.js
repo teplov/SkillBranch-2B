@@ -3,7 +3,9 @@
 module.exports = function (name) {
 
   let fullName = name || null;
+  console.log();
   if (!fullName) return 'Invalid fullname';
+  if (fullName.match(/[0-9_]/g)) return 'Invalid fullname';
 
   let shortName = null;
   let aName = fullName.split(' ');
