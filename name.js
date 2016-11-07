@@ -2,7 +2,9 @@
 
 module.exports = function (name) {
 
-  let fullName = name || 'Имя Отчество Фамилия';
+  let fullName = name || null;
+  if (!fullName) return 'Invalid fullname';
+
   let shortName = null;
   let aName = fullName.split(' ');
 
